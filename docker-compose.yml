@@ -1,0 +1,15 @@
+db:
+  image: million12/mariadb:latest
+  environment:
+    - MARIADB_PASS=my-pass
+web:
+  build: ./docker-files/web
+  ports:
+    - "80:80"
+    - "0.0.0.0:22:22"
+  links:
+    - db:db
+  volumes:
+    - ./dev/Packages/Sites:/var/www/neos/Packages/Sites
+    - ./dev/Packages/Plugins:/var/www/neos/Packages/Plugins
+    - ./dev/Configuration:/var/www/neos/Configuration

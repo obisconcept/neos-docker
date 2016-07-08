@@ -1,0 +1,17 @@
+#!/bin/sh
+
+NEOS_VHOST=${NEOS_VHOST:="dev.neos"}
+
+NEOS_DB_USER=${NEOS_DB_USER:="admin"}
+NEOS_DB_PASS=${NEOS_DB_PASS:="my-pass"}
+NEOS_DB_HOST=${NEOS_DB_HOST:="db"}
+NEOS_DB_PORT=${NEOS_DB_PORT:="3306"}
+NEOS_DB_NAME=${NEOS_DB_NAME:="db_neos"}
+MYSQL_CMD_PARAMS="-u$NEOS_DB_USER -p$NEOS_DB_PASS -h$NEOS_DB_HOST -P$NEOS_DB_PORT"
+
+NEOS_REPO=${NEOS_REPO:="https://github.com/neos/neos-base-distribution.git"}
+NEOS_SITE=${NEOS_SITE:="Neos.Demo"}
+NEOS_USERNAME=${NEOS_USERNAME:="admin"}
+NEOS_PASSWORD=${NEOS_PASSSWORD:="password"}
+NEOS_FNAME=${NEOS_FNAME:="Admin"}
+NEOS_LNAME=${NEOS_LNAME:="User"}
