@@ -1,6 +1,6 @@
 #!/bin/bash
 
-log() {
+function log() {
     if [[ "$@" ]]; then echo "[Neos] $@";
     else echo; fi
 }

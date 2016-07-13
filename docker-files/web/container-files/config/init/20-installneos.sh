@@ -1,5 +1,13 @@
 #!/bin/bash
 
+set -e
+set -u
+
+source /config/variables.sh
+source /config/functions.sh
+
+echo "127.0.0.1 ${NEOS_VHOST}" | tee -a /etc/hosts
+
 wait_for_db
 
 create_app_db
