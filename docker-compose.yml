@@ -6,7 +6,7 @@ web:
   build: ./docker-files/web
   ports:
     - "80:80"
-    - "0.0.0.0:22:22"
+    - "22:22"
   links:
     - db:db
   volumes:

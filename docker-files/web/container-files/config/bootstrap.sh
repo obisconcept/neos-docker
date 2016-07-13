@@ -12,4 +12,20 @@ if [ "$(ls /config/init/)" ]; then
   done
 fi
 
-supervisord
+# We have TTY, so probably an interactive container...
+if test -t 0; then
+  supervisord
+
+  if [[ $@ ]]; then
+    eval $@
+  else
+    export PS1='[\u@\h : \w]\$ '
+    /bin/bash
+  fi
+else
+  if [[ $@ ]]; then
+    eval $@
+  fi
+
+  supervisord
+fi
