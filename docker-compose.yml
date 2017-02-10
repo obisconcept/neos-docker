@@ -10,6 +10,6 @@ web:
   links:
     - db:db
   volumes:
-    - ./dev/Packages/Sites:/var/www/neos/Packages/Sites
-    - ./dev/Packages/Plugins:/var/www/neos/Packages/Plugins
+    - ./dev/Packages/FlowSites:/var/www/neos/Packages/FlowSites
+    - ./dev/Packages/FlowPlugins:/var/www/neos/Packages/FlowPlugins
     - ./dev/Configuration:/var/www/neos/Configuration
