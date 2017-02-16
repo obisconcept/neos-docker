@@ -8,9 +8,5 @@ Neos:
         password: 'my-pass'
         host: 'db'
         port: 3306
-    mvc:
-      routes:
-        'ObisConcept.NeosAjaxForm': TRUE
-        'ObisConcept.NeosSearch': TRUE
   Imagine:
     driver: Imagick
